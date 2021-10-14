@@ -10,6 +10,11 @@ sap.ui.define([
 		return Controller.extend("becloud.cl.project1.controller.Inicio", {
 			onInit: function () {
 
+                const oJSONModel = new sap.ui.model.json.JSONModel();
+                const oView = this.getView();
+                oJSONModel.loadData("./model/SelectionScreemMenu.json"); 
+                oView.setModel(oJSONModel,"selectionScreen");
+
 			}
 		});
 	});
